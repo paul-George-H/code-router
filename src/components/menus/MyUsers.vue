@@ -14,12 +14,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>xxx</td>
-        <td>xxx</td>
-        <td>xxx</td>
-        <td>xxx</td>
-        <td>xxx</td>
+      <tr v-for="(item, i) in userlist" :key="item.id">
+        <td>{{ i + 1 }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.position }}</td>
+        <td>
+          <router-link :to="'/home/users/' + item.id">详情</router-link>
+          </td>
       </tr>
     </tbody>
   </table>

@@ -2,11 +2,21 @@
   <div class="layout-aside-container">
     <!-- 左侧边栏列表 -->
     <ul class="user-select-none menu">
-      <li class="menu-item">用户管理</li>
-      <li class="menu-item">权限管理</li>
-      <li class="menu-item">商品管理</li>
-      <li class="menu-item">订单管理</li>
-      <li class="menu-item">系统设置</li>
+      <li class="menu-item">
+        <router-link to="/home/users">用户管理</router-link>
+      </li>
+      <li class="menu-item">
+        <router-link to="/home/rights">权限管理</router-link>
+        </li>
+      <li class="menu-item">
+        <router-link to="/home/goods">商品管理</router-link>
+        </li>
+      <li class="menu-item">
+        <router-link to="/home/orders">订单管理</router-link>
+        </li>
+      <li class="menu-item">
+        <router-link to="/home/settings">系统设置</router-link>
+        </li>
     </ul>
   </div>
 </template>

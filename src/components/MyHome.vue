@@ -1,6 +1,20 @@
 <template>
   <div class="home-container">
-    后台主页
+    <!-- 头部区域 -->
+    <my-header></my-header>
+
+    <!-- 主题区域 -->
+    <div class="home-main-box">
+
+      <!-- 左边侧边栏 -->
+      <my-aside></my-aside>
+
+      <!-- 右侧内容主题区域 -->
+      <div class="home-main-body">
+        <!-- 子路由占位符 -->
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 

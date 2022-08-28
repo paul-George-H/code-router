@@ -3,14 +3,14 @@
     <!-- 左侧 logo 和 标题区域 -->
     <div class="layout-header-left d-flex align-items-center user-select-none">
       <!-- logo -->
-      <img class="layout-header-left-img" src="../../assets/heima.png" alt="">
+      <img class="layout-header-left-img" src="../../assets/logo.png" alt="">
       <!-- 标题 -->
-      <h4 class="layout-header-left-title ml-3">黑马后台管理系统</h4>
+      <h4 class="layout-header-left-title ml-3">后台管理系统</h4>
     </div>
 
     <!-- 右侧按钮区域 -->
     <div class="layout-header-right">
-      <button type="button" class="btn btn-light">退出登录</button>
+      <button type="button" class="btn btn-light" @click="onLogout">退出登录</button>
     </div>
   </div>
 </template>
@@ -18,6 +18,15 @@
 <script>
 export default {
   name: 'MyHeader',
+  methods: {
+    // 退出登录的点击事件处理函数
+    onLogout() {
+      // 移除token
+      localStorage.removeItem('token')
+      // 强制跳转到"登录页面"
+      this.$router.push('/login')
+    },
+  },
 }
 </script>
 
